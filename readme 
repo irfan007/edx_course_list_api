@@ -1,0 +1,23 @@
+
+
+
+merging "course_list_api" app with edx
+______________________________________
+
+
+-> append below line to main url file of lms located in (edx-platform/lms/urls.py)
+        
+	from . import local_urls
+	urlpatterns +=local_urls.urlpatterns
+
+
+-> paste "local_urls.py" file to "/edx-platform/lms/"
+
+-> paste folder "course_list_api" to "edx-platform/lms/djangoapps/"
+
+-> access the app after reloading the platform with url as "/list_api/courses" or 
+    "/list_api/courses?org=NAME_OF_ORGANIZATION"
+	
+
+
+
